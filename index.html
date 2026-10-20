@@ -1,0 +1,28 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1b1f2a"><title>Schaaktrainer</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<header><h1>♞ Schaaktrainer</h1><nav>
+<button data-v="play">Spelen</button><button data-v="stats">Statistiek</button><button data-v="test">Niveautest</button></nav></header>
+<main>
+<section id="v-test" class="view">
+ <h2>Niveautest</h2><p id="t-info">Los 6 puzzels op: vind telkens de beste zet voor de kant die aan zet is. Daarmee bepalen we je startniveau.</p>
+ <div class="boardwrap"><div id="tboard" class="board"></div></div>
+ <p id="t-status" class="status"></p>
+ <div class="row"><button id="t-start">Start niveautest</button><button id="t-skip" class="sec">Overslaan (start op 800)</button></div>
+</section>
+<section id="v-play" class="view">
+ <div class="bar"><span>Niveau <b id="lvl">-</b></span><span id="turn"></span></div>
+ <div class="boardwrap"><div id="board" class="board"></div></div>
+ <p id="status" class="status"></p>
+ <div class="row"><button id="hint">💡 Hint</button><button id="resign" class="sec">🏳 Opgeven</button><button id="new">▶ Nieuwe partij</button></div>
+ <div id="analysis"></div>
+ <details><summary>Zettenlijst</summary><ol id="moves"></ol></details>
+</section>
+<section id="v-stats" class="view">
+ <h2>Jouw voortgang</h2><canvas id="chart" width="600" height="260"></canvas>
+ <div id="stats" class="grid"></div><h3>Geschiedenis</h3><ol id="hist" reversed></ol>
+ <button id="reset" class="sec">Alles wissen</button>
+</section></main>
+<script src="lib/chess.js"></script><script src="lib/sf-src.js"></script><script src="app.js"></script>
+</body></html>

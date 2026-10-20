@@ -1,0 +1,22 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#1b1f2a;color:#eee;-webkit-tap-highlight-color:transparent}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:8px 12px;background:#121520}
+h1{font-size:1.2rem;margin:0}nav button{margin-left:4px}
+main{max-width:640px;margin:0 auto;padding:8px}
+button{background:#d4a53a;color:#111;border:0;border-radius:8px;padding:10px 14px;font-size:1rem;font-weight:600;cursor:pointer}
+button.sec{background:#3a4152;color:#eee}button:disabled{opacity:.4}
+.view{display:none}.view.on{display:block}
+.boardwrap{width:min(100%,calc(100svh - 230px),600px);margin:0 auto;min-width:260px}
+.board{display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr);aspect-ratio:1;border-radius:6px;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
+.sq{position:relative;aspect-ratio:1;min-width:0;min-height:0;font-variant-emoji:text;font-family:"Segoe UI Symbol","DejaVu Sans","Noto Sans Symbols2",serif;display:flex;align-items:center;justify-content:center;font-size:min(9vw,62px);line-height:1}
+.l{background:#eed8b0}.d{background:#b5875a}
+.sq.sel{background:#f2e05b}.sq.last{box-shadow:inset 0 0 0 100px rgba(255,220,0,.35)}.sq.hint{box-shadow:inset 0 0 0 4px #2fd06a}
+.sq.tgt::after{content:"";position:absolute;width:28%;height:28%;border-radius:50%;background:rgba(0,0,0,.25)}
+.pc{pointer-events:none}.w{color:#fff;text-shadow:0 0 2px #000,0 0 1px #000,0 0 1px #000}.b{color:#111;text-shadow:0 0 2px #fff6}
+.drag{position:fixed;pointer-events:none;z-index:9;transform:translate(-50%,-60%);font-size:min(12vw,80px)}
+.coord{position:absolute;left:2px;bottom:1px;font-size:10px;color:#0007}
+.status{text-align:center;min-height:1.4em;font-weight:600}.row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0}
+.bar{display:flex;justify-content:space-between;padding:4px 2px}
+canvas{width:100%;height:auto;background:#121520;border-radius:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:10px 0}.grid div{background:#121520;padding:10px;border-radius:8px;text-align:center}.grid b{display:block;font-size:1.4rem;color:#d4a53a}
+#analysis{background:#121520;border-radius:8px;padding:0 10px}#analysis:empty{display:none}
+ol{padding-left:22px}#moves{columns:2}
