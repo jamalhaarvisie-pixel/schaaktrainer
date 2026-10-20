@@ -1,2 +1,3 @@
-# schaaktrainer
-Schaaktrainer (tijdelijk)
+# Schaaktrainer
+
+Tijdelijk gehost via GitHub Pages.
